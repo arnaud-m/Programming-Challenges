@@ -1,0 +1,43 @@
+
+\section{Input / Output}
+
+\begin{frame}{}
+  \Large
+  \centering
+  \color{bleu}
+  Input / Output
+\end{frame}
+
+\subsection{Examples}
+
+\begin{frame}[fragile]{Examples of Input/Output}
+  
+  \begin{block}{In Python}
+    \begin{lstlisting}[style=codePy]
+n = input('Type an integer\n')
+print('You entered {}\n'.format(n))
+    \end{lstlisting}
+  \end{block}
+  
+  \begin{block}{In C}
+    \begin{lstlisting}[style=codeC]
+printf("Type an integer\n");
+int n;
+scanf("%d", &n);
+printf("You entered %d\n", n);
+    \end{lstlisting}
+  \end{block}
+  
+  \begin{block}{In Java}
+    \begin{lstlisting}[style=codeJ]
+Scanner sc = new Scanner (System.in);
+System.out.println("Type an integer");
+int n = sc.nextInt();
+System.out.println("You entered " + n);
+    \end{lstlisting}
+  \end{block}
+  
+\end{frame}
+
+
+\subsection{Exercices}

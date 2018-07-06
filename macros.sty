@@ -1,0 +1,89 @@
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{amsfonts, wasysym}
+
+\usepackage{stmaryrd}
+
+\usepackage{setspace}
+\usepackage{beamerthemeCambridgeUS}
+\usecolortheme{dolphin}
+\usecolortheme[rgb={0, 0.6, 0.8}]{structure}
+\usepackage{calc}
+\usepackage{array, multicol}
+
+\usepackage{pgf,tikz, pifont}
+\usetikzlibrary{trees}
+\usetikzlibrary{positioning}
+
+
+\definecolor{rose}{rgb}{0.8,0,0.4}
+\definecolor{bleu}{rgb}{0,0.6,0.8}
+\definecolor{vert}{rgb}{0, 0.8, 0.8}
+\definecolor{vertc}{rgb}{0,0.8,0.4}
+\definecolor{orange}{rgb}{1,0.4,0.2}
+\definecolor{dore}{rgb}{0.7,0.5,0}
+\definecolor{jaune}{rgb}{0.9,0.7,0}
+\definecolor{mauve}{rgb}{0.6,0,0.8}
+\definecolor{bleuc}{rgb}{0.48,0.75,0.86}
+\definecolor{bleutc}{rgb}{0.65,0.84,0.9}
+\definecolor{bleuttc}{rgb}{0.82,0.95,1}
+
+
+\usepackage{hyperref}
+
+\newenvironment{remark}{\begin{alertblock}{Remarque}}{\end{alertblock}}
+\setbeamercolor{block title alert}{fg=rose}
+\setbeamercolor{alerted text}{fg=rose}
+
+\setbeamercolor{block title example}{fg=vertc}
+\setbeamercolor{example text}{fg=vertc}
+
+\usepackage{subfigure}
+
+\renewcommand\emph[1]{\textbf{\textcolor{bleu}{#1}}}
+\def\emphr#1{\textbf{\textcolor{rose}{#1}}}
+\def\empho#1{\textcolor{orange}{#1}}
+\def\emphv#1{\textcolor{vertc}{#1}}
+
+\usepackage{xspace}
+\usepackage{textcomp}
+
+\graphicspath{{figures/}}
+
+
+\usepackage{listings}
+
+\lstdefinestyle{codeC}{
+  aboveskip = 0pt,
+  breaklines = true,
+  language = C,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+\lstdefinestyle{codePy}{
+  aboveskip = 0pt,
+  breaklines = true,
+  language = Python,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+\lstdefinestyle{codeJ}{
+  aboveskip = 0pt,
+  breaklines = true,
+  language = Java,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+
