@@ -1,4 +1,10 @@
+%%%%%%%%%% Authors and date definition %%%%%%%%%%
 
+\author[]{Arnaud Malapert, Gilles Menez, Valentin Montmirail, Marie Pelleau}
+\date[2018 - 2019]{Master Informatique}
+
+
+%%%%%%%%% Package import %%%%%%%%%%
 \usepackage[utf8]{inputenc}
 
 \usepackage{graphicx}
@@ -13,6 +19,17 @@
 \usecolortheme[rgb={0, 0.6, 0.8}]{structure}
 \usepackage{calc}
 \usepackage{array, multicol}
+
+\usepackage{hyperref}
+
+\usepackage{subfigure}
+
+\usepackage{xspace}
+\usepackage{textcomp}
+
+\graphicspath{{figures/}}
+
+%%%%% For nice drawing with tikz :) %%%%%
 
 \usepackage{pgf,tikz, pifont}
 \usetikzlibrary{trees}
@@ -31,8 +48,7 @@
 \definecolor{bleutc}{rgb}{0.65,0.84,0.9}
 \definecolor{bleuttc}{rgb}{0.82,0.95,1}
 
-
-\usepackage{hyperref}
+%%%%%%%%%% Theme style %%%%%%%%%%
 
 \newenvironment{remark}{\begin{alertblock}{Remarque}}{\end{alertblock}}
 \setbeamercolor{block title alert}{fg=rose}
@@ -41,17 +57,10 @@
 \setbeamercolor{block title example}{fg=vertc}
 \setbeamercolor{example text}{fg=vertc}
 
-\usepackage{subfigure}
-
 \renewcommand\emph[1]{\textbf{\textcolor{bleu}{#1}}}
 \def\emphr#1{\textbf{\textcolor{rose}{#1}}}
 \def\empho#1{\textcolor{orange}{#1}}
 \def\emphv#1{\textcolor{vertc}{#1}}
-
-\usepackage{xspace}
-\usepackage{textcomp}
-
-\graphicspath{{figures/}}
 
 %%%%%%%%%% Coloration syntaxique %%%%%%%%%%
 
@@ -106,5 +115,3 @@
   commentstyle = \itshape\color{vertc},
   stringstyle = \color{rose}
 }
-
-
