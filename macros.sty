@@ -53,6 +53,7 @@
 
 \graphicspath{{figures/}}
 
+%%%%%%%%%% Coloration syntaxique %%%%%%%%%%
 
 \usepackage{listings}
 
@@ -80,6 +81,26 @@
   aboveskip = 0pt,
   breaklines = true,
   language = Java,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+\lstdefinestyle{codeR}{
+  aboveskip = 0pt,
+  breaklines = true,
+  language = R,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+\lstdefinestyle{codeS}{
+  aboveskip = 0pt,
+  breaklines = true,
+  language = sh,
   basicstyle = \footnotesize,
   keywordstyle = \color{bleu},
   commentstyle = \itshape\color{vertc},
