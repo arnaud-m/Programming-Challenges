@@ -43,20 +43,56 @@
   \end{block}
 }
 
-\input{io.tex}
+\subsection{Examples}
 
-\input{num.tex}
+\begin{frame}[fragile]{Examples of Input/Output}
+  
+  \begin{block}{In Python}
+    \begin{lstlisting}[style=codePy]
+n = input('Type an integer\n')
+print('You entered {}\n'.format(n))
+    \end{lstlisting}
+  \end{block}
+  
+  \begin{block}{In C}
+    \begin{lstlisting}[style=codeC]
+printf("Type an integer\n");
+int n;
+scanf("%d", &n);
+printf("You entered %d\n", n);
+    \end{lstlisting}
+  \end{block}
+  
+  \begin{block}{In Java}
+    \begin{lstlisting}[style=codeJ]
+Scanner sc = new Scanner (System.in);
+System.out.println("Type an integer");
+int n = sc.nextInt();
+System.out.println("You entered " + n);
+    \end{lstlisting}
+  \end{block}
+  
+\end{frame}
 
-\input{tab.tex}
-
-\input{list.tex}
-
-\input{tree.tex}
-
-\input{progdyn.tex}
-
-\input{pattern.tex}
-
-\input{graph.tex}
+\begin{frame}[fragile]{Examples of Input/Output}
+  
+  \begin{block}{In R}
+    \begin{lstlisting}[style=codeR]
+n <- readline(promtp("Type an integer")
+# conversion in integer
+n <- as.integer(n)
+print(paste("You entered", n))
+    \end{lstlisting}
+  \end{block}
+  
+  \begin{block}{In shell}
+    \begin{lstlisting}[style=codeS]
+echo "Type an integer"
+read n
+echo "You entered $n"
+    \end{lstlisting}
+  \end{block}
+  
+\end{frame}
 
 \end{document}
