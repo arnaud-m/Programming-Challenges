@@ -66,16 +66,10 @@
 
 \newenvironment{code}[1]{\begin{alertblock}{#1}}{\end{alertblock}}
 
-\newenvironment{codeTest}[2]
-  {\begin{alertblock}{#1}
-    \begin{lstlisting}[style=#2]
-  }{
-    \end{lstlisting}
-  \end{alertblock}}
-
 \usepackage{listings}
 
 \lstdefinestyle{codeC}{
+  mathescape=true,
   aboveskip = 0pt,
   breaklines = true,
   language = C,
@@ -86,6 +80,7 @@
 }
 
 \lstdefinestyle{codePy}{
+  mathescape=true,
   aboveskip = 0pt,
   breaklines = true,
   language = Python,
@@ -96,6 +91,7 @@
 }
 
 \lstdefinestyle{codeJ}{
+  mathescape=true,
   aboveskip = 0pt,
   breaklines = true,
   language = Java,
@@ -106,6 +102,7 @@
 }
 
 \lstdefinestyle{codeR}{
+  mathescape=true,
   aboveskip = 0pt,
   breaklines = true,
   language = R,
@@ -119,6 +116,25 @@
   aboveskip = 0pt,
   breaklines = true,
   language = sh,
+  basicstyle = \footnotesize,
+  keywordstyle = \color{bleu},
+  commentstyle = \itshape\color{vertc},
+  stringstyle = \color{rose}
+}
+
+\lstdefinelanguage{pseudo}{
+  morekeywords={return, if, then, foreach, for, while, do, from, to},
+  sensitive=false,
+  morecomment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  morestring=[b]"
+}
+
+\lstdefinestyle{pseudoCode}{
+  mathescape=true,
+  aboveskip = 0pt,
+  breaklines = true,
+  language = pseudo,
   basicstyle = \footnotesize,
   keywordstyle = \color{bleu},
   commentstyle = \itshape\color{vertc},
