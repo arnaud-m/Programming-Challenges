@@ -128,6 +128,8 @@ initialize the solution array with 0
 foreach page between A and B
     foreach digit in page
         increment the corresponding cell
+
+print the result
     \end{PseudoCode}
   \end{code}
 \end{frame}
@@ -149,6 +151,8 @@ if diff mod 10 $\neq$ 0 then
 A $\leftarrow \lfloor A / 10 \rfloor$
 B $\leftarrow \lfloor B / 10 \rfloor$
 deal with the ten
+
+print the result
     \end{PseudoCode}
   \end{code}
 \end{frame}
@@ -246,6 +250,14 @@ deal with the ten
 
   \begin{code}{Solution: Brut force}
     \begin{PseudoCode}
+read the array $tab$ on standard input    
+
+result $\leftarrow$ 0
+
+foreach value in tab
+    result $\leftarrow$ result + sum of previous values strictly smaller than value
+
+print result
     \end{PseudoCode}
   \end{code}
 \end{frame}
