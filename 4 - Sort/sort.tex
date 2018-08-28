@@ -291,35 +291,209 @@ Using two lists or arrays with insertion sort
   
   \begin{code}{Solution 2: Integrated}
     \begin{PseudoCode}
-Using the sort procedure in your preferred language
+Using two arrays and the sort procedure in your preferred language
     \end{PseudoCode}
   \end{code}
   
+\end{frame}
+
+\begin{frame}{Exercise 1: Candy Distribution}
+
+  \begin{exampleblock}{More test cases}
+    \emphv{Input:}\\
+    4\\1 10 2 1\\1 2 4 2\\
+    5\\10 80 37 22 89\\6 8 8 20 15\\
+    0
+    
+    \medskip
+    \emphv{Output:}\\
+    20\\
+    2000
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Exercise 2: Inversion Count}
   
   \begin{overlayarea}{\textwidth}{\textheight}
   \begin{block}{Statement}
+    Given an array $A$ of integers. If $i < j$ and $A[i] > A[j]$ then the pair $(i, j)$ is called an inversion of $A$. Count the number of inversions of $A$
   \end{block}
   
+  \only<1>{
   \begin{example}
-  \end{example}
+    \emphv{Input:}\\
+    2 3 8 6 1
+    
+    \medskip
+    \emphv{Output:}\\
+    5
+  \end{example}}
   
+  \only<2->{
   \begin{block}{What problems can arise?}
-  \end{block}
+    \begin{itemize}
+      \item How great can the array be?
+      \item<3-> How great can the values in the array be?
+      \item<4-> How great can the solution be?\\
+      \uncover<5->{\emph{$\Longrightarrow$} Are integers big enough for the solution?}
+    \end{itemize}
+  \end{block}}
   \end{overlayarea}
   
 \end{frame}
 
 \begin{frame}[fragile]{Exercise 2: Inversion Count}
   
-  \begin{code}{Solution: Elegant}
+  \begin{code}{Solution 1: Brut Force}
     \begin{PseudoCode}
-Using Merge sort
+read $n$ on standard input    
+read the array $A$ on standard input    
+
+result $\leftarrow$ 0
+
+for $i$ from 0 to $n-2$
+    for $j$ from $i+1$ to $n-1$
+        if $A[i] > A[j]$ then
+            result $\leftarrow$ result + 1
+
+print result
     \end{PseudoCode}
   \end{code}
   
+\end{frame}
+
+\begin{frame}[fragile]{Exercise 2: Inversion Count}
+  
+  \begin{code}{Solution 2: Using Merge sort}
+    \only<1>{Key idea: if there are no inversions, then during the merge, all the elements of the left array should be added before any element of the right array}
+    
+    \centering
+    \begin{tikzpicture}[scale = 0.45]
+      \only<2->{
+      \draw (0, 0) rectangle (5, 1);
+      \foreach \x in {1, 2, ..., 5}
+        \draw (\x, 0) -- (\x, 1);
+      
+      \draw (0.5, 0.5) node {2};
+      \draw (1.5, 0.5) node {3};
+      \draw (2.5, 0.5) node {8};
+      \draw (3.5, 0.5) node {6};
+      \draw (4.5, 0.5) node {1};
+      }
+      
+      \only<3->{\draw[rose, thick] (2, 1) -- (2, 0);}
+      
+      \uncover<4->{
+      \draw[rose, ->] (1, -0.2) -- (0, -0.8);
+      \draw[rose, ->] (3.5, -0.2) -- (4.5, -0.8);
+      
+      \draw (-1, -2) rectangle (1, -1);
+      \draw (3, -2) rectangle (6, -1);
+      \foreach \x in {0, 4, 5}
+        \draw (\x, -2) -- (\x, -1);
+        
+      \draw (-0.5, -1.5) node {2};
+      \draw (0.5, -1.5) node {3};
+      \draw (3.5, -1.5) node {8};
+      \draw (4.5, -1.5) node {6};
+      \draw (5.5, -1.5) node {1};
+      }
+      
+      \only<5->{\draw[rose, thick] (0, -1) -- (0, -2);}
+      
+      \uncover<6->{
+      \draw[rose, ->] (-0.5, -2.2) -- (-1, -2.8);
+      \draw[rose, ->] (0.5, -2.2) -- (1, -2.8);
+      
+      \draw (-1.5, -4) rectangle (-0.5, -3);
+      \draw (0.5, -4) rectangle (1.5, -3);
+      
+      \draw (-1, -3.5) node {2};
+      \draw (1, -3.5) node {3};
+      }
+      
+      \uncover<7->{
+      \draw[vert, <-] (-0.5, -4.8) -- (-1, -4.2);
+      \draw[vert, <-] (0.5, -4.8) -- (1, -4.2);
+      \draw (-1, -6) rectangle (1, -5) (0, -6) -- (0, -5);
+      \draw (-0.5, -5.5) node {2};
+      \draw (0.5, -5.5) node {3};
+      }
+      
+      \only<8->{\draw[rose, thick] (4, -1) -- (4, -2);}
+      \uncover<9->{
+      \draw[rose, ->] (3.5, -2.2) -- (3, -2.8);
+      \draw[rose, ->] (5, -2.2) -- (5.5, -2.8);
+      
+      \draw (2.5, -4) rectangle (3.5, -3);
+      \draw (4.5, -4) rectangle (6.5, -3) (5.5, -4) -- (5.5, -3);
+      
+      \draw (3, -3.5) node {8};
+      \draw (5, -3.5) node {6};
+      \draw (6, -3.5) node {1};
+      }
+      
+      \only<10->{\draw[rose, thick] (5.5, -4) -- (5.5, -3);}
+      \uncover<11->{
+      \draw[rose, ->] (5, -4.2) -- (4.5, -4.8);
+      \draw[rose, ->] (6, -4.2) -- (6.5, -4.8);
+
+      \draw (4, -6) rectangle (5, -5);
+      \draw (6, -6) rectangle (7, -5);
+      
+      \draw (4.5, -5.5) node {6};
+      \draw (6.5, -5.5) node {1};
+      }
+      
+      \uncover<12->{
+      \draw[vert, <-] (5, -6.8) -- (4.5, -6.2);
+      \draw[vert, <-] (6, -6.8) -- (6.5, -6.2);
+      \draw (4.5, -8) rectangle (6.5, -7) (5.5, -8) -- (5.5, -7);
+      \draw (5, -7.5) node {1};
+      \draw (6, -7.5) node {6};
+      \draw (6.5, -7.5) node[right] {\emph{+ 1}};
+      }
+      
+      \uncover<13->{
+      \draw[vert, <-] (3.5, -8.8) -- (3, -4.2);
+      \draw[vert, <-] (5, -8.8) -- (5.5, -8.2);
+      
+      \draw (3, -10) rectangle (6, -9) (4, -10) -- (4, -9) (5, -10) -- (5, -9);
+        
+      \draw (3.5, -9.5) node {1};
+      \draw (4.5, -9.5) node {6};
+      \draw (5.5, -9.5) node {8};
+      \draw (6, -9.5) node[right] {\emph{+ 1 + 1}};
+      }
+      
+      \uncover<14->{
+      \draw[vert, <-] (1, -10.8) -- (0, -6.2);
+      \draw[vert, <-] (3.5, -10.8) -- (4.5, -10.2);
+      
+      \draw (0, -12) rectangle (5, -11);
+      \foreach \x in {1, 2, ..., 5}
+        \draw (\x, -12) -- (\x, -11);
+        
+      \draw (0.5, -11.5) node {1};
+      \draw (1.5, -11.5) node {2};
+      \draw (2.5, -11.5) node {3};
+      \draw (3.5, -11.5) node {6};
+      \draw (4.5, -11.5) node {8};
+      \draw (5, -11.5) node[right] {\emph{+ 2}};
+      }
+      
+    \end{tikzpicture}
+  \end{code}
+  
+\end{frame}
+
+\begin{frame}{Exercise 2: Inversion Count}
+  \begin{exampleblock}{More test cases}
+    \emphv{Input:}\\
+        
+    \medskip
+    \emphv{Output:}\\
+  \end{exampleblock}
 \end{frame}
 
 \begin{frame}{Exercise 3: It's a Murder}
@@ -346,6 +520,16 @@ Using Merge sort
     \end{PseudoCode}
   \end{code}
   
+\end{frame}
+
+
+\begin{frame}{Exercise 3: It's a Murder}
+  \begin{exampleblock}{More test cases}
+    \emphv{Input:}\\
+        
+    \medskip
+    \emphv{Output:}\\
+  \end{exampleblock}
 \end{frame}
 
 \end{document}
