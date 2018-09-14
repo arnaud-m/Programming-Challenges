@@ -408,80 +408,83 @@ print result
       \draw (-1.5, -4) rectangle (-0.5, -3);
       \draw (0.5, -4) rectangle (1.5, -3);
       
-      \draw (-1, -3.5) node {2};
-      \draw (1, -3.5) node {3};
+      \draw (-1, -3.5) node {\only<8->\info{2}};
+      \draw (1, -3.5) node {\only<9->\info{3}};
       }
       
       \uncover<7->{
+      \draw (-1, -6) rectangle (1, -5) (0, -6) -- (0, -5);
       \draw[vert, <-] (-0.5, -4.8) -- (-1, -4.2);
       \draw[vert, <-] (0.5, -4.8) -- (1, -4.2);
-      \draw (-1, -6) rectangle (1, -5) (0, -6) -- (0, -5);
-      \draw (-0.5, -5.5) node {2};
-      \draw (0.5, -5.5) node {3};
+      \only<8->{\draw (-0.5, -5.5) node {\only<23->\info{2}};}
+      \only<9->{\draw (0.5, -5.5) node {\only<24->\info{3}};}
       }
       
-      \only<8->{\draw[rose, thick] (4, -1) -- (4, -2);}
-      \uncover<9->{
+      \only<10->{\draw[rose, thick] (4, -1) -- (4, -2);}
+      \uncover<11->{
       \draw[rose, ->] (3.5, -2.2) -- (3, -2.8);
       \draw[rose, ->] (5, -2.2) -- (5.5, -2.8);
       
       \draw (2.5, -4) rectangle (3.5, -3);
       \draw (4.5, -4) rectangle (6.5, -3) (5.5, -4) -- (5.5, -3);
       
-      \draw (3, -3.5) node {8};
+      \draw (3, -3.5) node {\only<20->\info{8}};
       \draw (5, -3.5) node {6};
       \draw (6, -3.5) node {1};
       }
       
-      \only<10->{\draw[rose, thick] (5.5, -4) -- (5.5, -3);}
-      \uncover<11->{
+      \only<12->{\draw[rose, thick] (5.5, -4) -- (5.5, -3);}
+      \uncover<13->{
       \draw[rose, ->] (5, -4.2) -- (4.5, -4.8);
       \draw[rose, ->] (6, -4.2) -- (6.5, -4.8);
 
       \draw (4, -6) rectangle (5, -5);
       \draw (6, -6) rectangle (7, -5);
       
-      \draw (4.5, -5.5) node {6};
-      \draw (6.5, -5.5) node {1};
-      }
-      
-      \uncover<12->{
-      \draw[vert, <-] (5, -6.8) -- (4.5, -6.2);
-      \draw[vert, <-] (6, -6.8) -- (6.5, -6.2);
-      \draw (4.5, -8) rectangle (6.5, -7) (5.5, -8) -- (5.5, -7);
-      \draw (5, -7.5) node {1};
-      \draw (6, -7.5) node {6};
-      \draw (6.5, -7.5) node[right] {\emph{+ 1}};
-      }
-      
-      \uncover<13->{
-      \draw[vert, <-] (3.5, -8.8) -- (3, -4.2);
-      \draw[vert, <-] (5, -8.8) -- (5.5, -8.2);
-      
-      \draw (3, -10) rectangle (6, -9) (4, -10) -- (4, -9) (5, -10) -- (5, -9);
-        
-      \draw (3.5, -9.5) node {1};
-      \draw (4.5, -9.5) node {6};
-      \draw (5.5, -9.5) node {8};
-      \draw (6, -9.5) node[right] {\emph{+ 1 + 1}};
+      \draw (4.5, -5.5) node {\only<16->\info{6}};
+      \draw (6.5, -5.5) node {\only<15->\info{1}};
       }
       
       \uncover<14->{
+      \draw (4.5, -8) rectangle (6.5, -7) (5.5, -8) -- (5.5, -7);
+      \draw[vert, <-] (5, -6.8) -- (4.5, -6.2);
+      \draw[vert, <-] (6, -6.8) -- (6.5, -6.2);
+      \only<15->{
+      \draw (5, -7.5) node {\only<18->\info{1}};
+      \draw (6.5, -7.5) node[right] {\emph{+ 1}};
+      }
+      \only<16->{\draw (6, -7.5) node {\only<19->\info{6}};}
+      }
+      
+      \uncover<17->{
+      \draw (3, -10) rectangle (6, -9) (4, -10) -- (4, -9) (5, -10) -- (5, -9);
+      \draw[vert, <-] (5, -8.8) -- (5.5, -8.2);
+      \draw[vert, <-] (3.5, -8.8) -- (3, -4.2);
+      \only<18->{
+      \draw (3.5, -9.5) node {\only<22->\info{1}};
+      \draw (6, -9.5) node[right] {\emph{+ 1 \only<19->{+ 1}}};
+      }
+      \only<19->{\draw (4.5, -9.5) node {\only<25->\info{6}};}
+      \only<20->{\draw (5.5, -9.5) node {\only<26->\info{8}};}
+      }
+      
+      \uncover<21->{
       \draw[vert, <-] (1, -10.8) -- (0, -6.2);
       \draw[vert, <-] (3.5, -10.8) -- (4.5, -10.2);
       
       \draw (0, -12) rectangle (5, -11);
       \foreach \x in {1, 2, ..., 5}
         \draw (\x, -12) -- (\x, -11);
-        
+      
+      \only<22->{
       \draw (0.5, -11.5) node {1};
-      \draw (1.5, -11.5) node {2};
-      \draw (2.5, -11.5) node {3};
-      \draw (3.5, -11.5) node {6};
-      \draw (4.5, -11.5) node {8};
       \draw (5, -11.5) node[right] {\emph{+ 2}};
       }
-      
+      \only<23->{\draw (1.5, -11.5) node {2};}}
+      \only<24->{\draw (2.5, -11.5) node {3};}
+      \only<25->{\draw (3.5, -11.5) node {6};}
+      \only<26->{\draw (4.5, -11.5) node {8};}
+      }
     \end{tikzpicture}
   \end{code}
   
@@ -490,29 +493,32 @@ print result
 \begin{frame}{Exercise 2: Inversion Count}
   \begin{exampleblock}{More test cases}
     \emphv{Input:}\\
-        
+    3\\6\\1 2 3 4 5 6\\8\\5 1 4 2 6 2 6 2\\1\\1%\\5\\4 1 2 4 2\\7\\1 4 2 5 2 56 2
+
     \medskip
     \emphv{Output:}\\
+    0\\11\\0%\\4\\6 
   \end{exampleblock}
 \end{frame}
 
-\begin{frame}{Exercise 3: It's a Murder}
+\begin{frame}[fragile]{Exercise 3: It's a Murder}
   
-  \begin{overlayarea}{\textwidth}{\textheight}
   \begin{block}{Statement}
     Given an array of integers, for each number sum the previous strictly smaller number 
   \end{block}
   
   \begin{example}
+    \begin{columns}[T]
+      \begin{column}{0.17\linewidth}
+        \emphv{Input:}\\
+        1\\5\\1 5 3 6 4%\\7\\1 3 5 2 6 7 4
+      \end{column}
+      \begin{column}{0.79\linewidth}
+        \emphv{Output:}\\
+        15%\\40
+      \end{column}
+    \end{columns}
   \end{example}
-  
-  \begin{block}{What problems can arise?}
-  \end{block}
-  \end{overlayarea}
-  
-\end{frame}
-
-\begin{frame}[fragile]{Exercise 3: It's a Murder}
   
   \begin{code}{Solution: Elegant}
     \begin{PseudoCode}
@@ -522,14 +528,31 @@ Using Merge sort
   
 \end{frame}
 
-
-\begin{frame}{Exercise 3: It's a Murder}
-  \begin{exampleblock}{More test cases}
-    \emphv{Input:}\\
-        
-    \medskip
-    \emphv{Output:}\\
-  \end{exampleblock}
+\begin{frame}[fragile]{Exercise 4: Yodaness Level}
+  
+  \begin{block}{Statement}
+    Given a statement as Yoda says it and the same statement as it should be said normally count the number of pairs of words that changed their order
+  \end{block}
+  
+  \begin{example}
+    \begin{columns}[T]
+      \begin{column}{0.40\linewidth}
+        \emphv{Input:}\\
+        1\\6\\much to learn you still have\\you still have much to learn
+      \end{column}
+      \begin{column}{0.50\linewidth}
+        \emphv{Output:}\\
+        9
+      \end{column}
+    \end{columns}
+  \end{example}
+  
+  \begin{code}{Solution: Elegant}
+    \begin{PseudoCode}
+Using Merge sort
+    \end{PseudoCode}
+  \end{code}
+  
 \end{frame}
 
 \end{document}
