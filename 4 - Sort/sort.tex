@@ -119,13 +119,13 @@
         \draw (-1.5, -4.5) rectangle (4.5, -3.5);
         \foreach \x in {-0.5, 0.5, ..., 3.5}
           \draw (\x, -4.5) -- (\x, -3.5);
-        \draw (-1, -4) node {\only<4->{\only<4>\emph{1}}};
-        \draw (0, -4) node {\only<6->{\only<6>\emph{2}}};
-        \draw (1, -4) node {\only<8->{\only<8>\emph{3}}};
-        \draw (2, -4) node {\only<10->{\only<10>\emph{5}}};
-        \draw (3, -4) node {\only<12->{\only<12>\emph{7}}};
-        \draw (4, -4) node {\only<14->{\only<14>\emph{9}}};
       }
+      \only<4->{\draw (-1, -4) node {\only<4>\emph1};}
+      \only<6->{\draw (0, -4) node {\only<6>\emph2};}
+      \only<8->{\draw (1, -4) node {\only<8>\emph3};}
+      \only<10->{\draw (2, -4) node {\only<10>\emph5};}
+      \only<12->{\draw (3, -4) node {\only<12>\emph7};}
+      \only<14->{\draw (4, -4) node {\only<14>\emph9};}
     \end{tikzpicture}
   \end{block}
   
@@ -480,7 +480,7 @@ print result
       \draw (0.5, -11.5) node {1};
       \draw (5, -11.5) node[right] {\emph{+ 2}};
       }
-      \only<23->{\draw (1.5, -11.5) node {2};}}
+      \only<23->{\draw (1.5, -11.5) node {2};}
       \only<24->{\draw (2.5, -11.5) node {3};}
       \only<25->{\draw (3.5, -11.5) node {6};}
       \only<26->{\draw (4.5, -11.5) node {8};}
