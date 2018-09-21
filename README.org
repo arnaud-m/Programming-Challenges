@@ -9,11 +9,11 @@
 
   This course will introduce an interesting variety of subjects in programming, algorithms, and discrete mathematics though puzzles and problems which have appeared in the International ACM Programming Contest and similar venues.
 
-  This is a lecture-lab course in which topics are presented by the instructor, practice problems are explained, and assigned problems are completed by students both during lab periods and outside of class. 
-  
+  This is a lecture-lab course in which topics are presented by the instructor, practice problems are explained, and assigned problems are completed by students both during lab periods and outside of class.
+
 * Lectures
 
-| O. | Getting Started     |   |   |   |   |
+| 0. | Getting Started     |   |   |   |   |
 | 1. | Input/Output        |   |   |   |   |
 | 2. | Numbers             |   |   |   |   |
 | 3. | Array               |   |   |   |   |
@@ -24,11 +24,11 @@
 | 8. | Graph               |   |   |   |   |
 
 * Grading
-  - *Concours Prog @ UNS* (40%): you will participate to a local programming contest. Your grade will depend on your rank in the contest. 
-  - *Homework* (20%): there will be problem sets over the course of the semester, one per week. 
+  - *Concours Prog @ UNS* (40%): you will participate to a local programming contest. Your grade will depend on your rank in the contest.
+  - *Homework* (20%): there will be problem sets over the course of the semester, one per week.
   - *Final Exam* (40%): there will be one final exam (1 hour) where you will be asked to solve one of two problems.
 
-* Resources 
+* Resources
 
 - [[https://www3.cs.stonybrook.edu/~skiena/392/][CSE 392 - Programming Challenges (2012)]]
 
