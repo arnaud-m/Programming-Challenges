@@ -1,0 +1,193 @@
+\documentclass{beamer}
+
+\usepackage{../macros}
+
+\title[Getting Started with Prog. Challenges]{Getting Started with Programming Challenges}
+
+\begin{document}
+
+\frame{
+  \titlepage
+}
+ 
+\section{Examples}
+
+
+\begin{frame}[fragile]{Course Goals}
+  \begin{itemize}
+  \item To provide a challenging, self-motivating course for good students to learn what makes programming/computer science fun and exciting.
+\item To strengthen the algorithmic/procedural intuition of students raised in a world of object-oriented programming.
+\item To provide an enthusiastic cadre of good students, and perhaps strengthen student culture.
+\end{itemize}
+
+\begin{alertblock}{Should you be taking this course?}
+  It depends upon your interests, background, and skills.
+\end{alertblock}
+\end{frame}
+
+
+\begin{frame}{Class Participation!}
+  \begin{alertblock}{This course will require class participation!}
+    \begin{itemize}
+    \item The first part of each lecture will introduce the problems and relevant theory.
+    \item In the second part, you will let you try to solve them.
+    \item<alert@1> No effort and/or no discussion equals boring class!
+    \end{itemize}
+  \end{alertblock}
+
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{About the ACM Contest}
+
+  \begin{block}{\href{https://www.acm.org/}{Association for Computing Machinery (ACM)}}
+    It brings together computing educators, researchers, and professionals to inspire dialogue, share resources, and address the field's challenges. As the world’s largest computing society, ACM strengthens the profession's collective voice through strong leadership, promotion of the highest standards, and recognition of technical excellence. 
+  \end{block}
+
+  \begin{block}{\href{https://icpc.baylor.edu/}{ACM International Collegiate Programming Contest (ICPC)}}
+    It provides college students with opportunities to interact with students from other universities and to sharpen and demonstrate their problem-solving, programming, and teamwork skills. 
+   The contest provides a platform for ACM, industry, and academia to encourage and focus public attention on the next generation of computing professionals as they pursue excellence.
+ \end{block}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{About the ACM Contest}
+  The contest stresses teamwork (3 people with 1 or 2 computers per team) as well as individual efforts, since small programs are best written by one person, perhaps after group discussions.
+  
+  \begin{itemize}
+  \item Many of the problems are well-known exercises couched in different guises.
+  \item The  judges  provide  very  little  feedback  about  why  your program is wrong.
+  \item Often you must debug it by reading the specifications again
+  \end{itemize}
+  
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+  \frametitle{Contest Scoring}
+
+  \begin{enumerate}
+  \item \alert{The team score is the number of problems solved correctly} over the course of the contest, typically 4 hours.
+  \item Ties are broken by the cumulative elapsed time taken to correct submissions, with possible time penalties given for each incorrect submission of an (ultimately) correctly solved problem.
+  \end{enumerate}
+
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{frame}{Problem Specification: \href{https://www.spoj.com/problems/DOUGHNUT/}{DOUGHNUT}}
+  \begin{block}{Problem description}
+    Young Harry was asked to buy some foodstuff to his neighbour, weird old lady who owed a lot of fat cats. But cats were weird too and they ate only doughnuts. So the lady wanted \dots
+  \end{block}
+
+  \begin{block}{Input Description}
+    There is a single positive integer $t$ ($t \leq 100$) on the first line of input which corresponds to the number of tests (Harry was asked to buy doughnuts few times). Then $t$ lines \dots
+  \end{block}
+
+  \begin{block}{Output description}
+    $t$ lines containing word "yes" if Harry is capable of handling the task or "no" if doughnuts would cause his back crack.
+  \end{block}
+
+  \begin{block}{Input and Output Examples}
+  \end{block}
+
+%  See \href{https://www.spoj.com/tutorials/USERS/}{How to cope with SPOJ?} or the \href{https://developer.sphere-engine.com/other/handbook}{Problem's setter handbook}.
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{frame}{Problem Solution}
+  A solution is a \emph{sequential program without external library calls nor file/network IO} in whatever languages you wish that :
+  \begin{enumerate}
+  \item reads the test cases from the standard input;
+  \item solves the provided test cases;
+  \item prints the results on the standard output.
+  \end{enumerate}
+  Of course, these steps can be imbricated.
+
+  \begin{block}{Standard Streams}
+    They are preconnected input and output communication channels between a computer program and its environment when it begins execution.
+  \end{block}
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+  \frametitle{Feedback from the Judge I}
+  \emph{Be aware that the judges are often very picky as to what denotes a correct solution.}
+  It is very important to interpret the problem specifications properly and not make assumptions.
+
+  The judge is likely to return one of the following verdicts:
+
+  \begin{block}{Accepted (AC)}
+    Congratulations! 
+  \end{block}
+
+  \begin{block}{Wrong Answer (WA)}
+    Your program returned an incorrect answer to one or more secret test cases.
+  \end{block}
+
+  \begin{block}{Time Limit Exceeded (TLE)}
+    Your program took too much time on at least one of the test cases, so you likely have a problem with efficiency.
+  \end{block}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\begin{frame}
+  \frametitle{Feedback from the Judge II}
+  With a good coding methodology, the judge should rarely return:
+  \begin{block}{Compilation Error (CE)}
+    The compiler could not figure out how to compile your program. Warning messages are ignored by the judge.
+  \end{block}
+
+  \begin{block}{Runtime Error (RE)}
+    Your program failed during execution due to a segmentation fault, floating point exception, or similar problem.
+  \end{block}
+
+  \begin{block}{Memory Limit Exceeded (MLE)}
+    Your program tried to use more memory than the judge’s default settings.
+  \end{block}
+
+  \begin{block}{Output Limit Exceeded (OLE)}
+    Your program tried to print too much output, perhaps trapped in a infinite loop.
+  \end{block}
+
+\end{frame}
+
+
+\begin{frame}{Languages}
+
+  \begin{block}{Automatic judges}
+    \begin{itemize}
+      Robot judges accept programs in C, C++, Java, Python, and Gnu R. In fact, You may use whatever language you wish. 
+    \end{itemize}
+  \end{block}
+
+  \begin{block}{Popular languages}
+    \begin{itemize}
+    \item C/C++ is still the most popular language for programming contest.
+    \item Python often comes second.
+    \end{itemize}
+    \emph{Choose the language that you like the most as default.}
+  \end{block}
+
+\begin{block}{e \href{https://github.com/arnaud-m/echo}{ECHO Problem}}
+  Take a look at the \href{https://github.com/arnaud-m/echo}{ECHO repository} which contains templates for the most popular languages in Nice. You can contribute if your favorite language is absent.
+\end{block}
+
+  \end{frame}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
