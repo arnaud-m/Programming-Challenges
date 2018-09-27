@@ -14,15 +14,15 @@
 * Lectures
 
 
-| 0. | Getting Started     |             |                 |   |
-| 1. | Input/Output        | [[https://51364960.widgets.sphere-engine.com/lp?hash=BYJvSEImzv][TEST]] ([[https://www.spoj.com/problems/TEST/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=5nZK5szNQp][HELLOKIT]] ([[https://www.spoj.com/problems/HELLOKIT/][spoj]]) |   |
-| 2. | Numbers             |             |                 |   |
-| 3. | Array               |             |                 |   |
-| 4. | List                |             |                 |   |
-| 5. | Tree                |             |                 |   |
-| 6. | Dynamic Programming |             |                 |   |
-| 7. | String Processing   |             |                 |   |
-| 8. | Graph               |             |                 |   |
+| 0. | [[file:0-Getting-Started/0-Getting-Started.pdf][Getting Started]]     |             |                 |                            |
+| 1. | [[file:1-Input-Output/1-Input-Output.pdf][Input/Output]]        | [[https://51364960.widgets.sphere-engine.com/lp?hash=BYJvSEImzv][TEST]] ([[https://www.spoj.com/problems/TEST/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=5nZK5szNQp][HELLOKIT]] ([[https://www.spoj.com/problems/HELLOKIT/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=3PHly1PcH6][LC-DISPLAY]]                 |
+| 2. | Numbers             | [[https://51364960.widgets.sphere-engine.com/lp?hash=akOa9uI8qs][GILNUM]]      | [[https://51364960.widgets.sphere-engine.com/lp?hash=aXNs7iIWY3][GILNUM (C/C++)]]  | [[https://51364960.widgets.sphere-engine.com/lp?hash=aLzFhfssNq][MIRROR]] ([[http://www.i3s.unice.fr/~malapert/org/teaching/R/concours-PC2.html#orgheadline34][with math display]]) |
+| 3. | Array               |             |                 |                            |
+| 4. | List                |             |                 |                            |
+| 5. | Tree                |             |                 |                            |
+| 6. | Dynamic Programming |             |                 |                            |
+| 7. | String Processing   |             |                 |                            |
+| 8. | Graph               |             |                 |                            |
 
 * Grading
   - *Concours Prog @ UNS* (40%): you will participate to a local programming contest. Your grade will depend on your rank in the contest. 
