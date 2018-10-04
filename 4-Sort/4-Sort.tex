@@ -1,4 +1,5 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
+%\documentclass{beamer}
 
 \usepackage{../macros}
 
@@ -32,63 +33,63 @@
         \draw (\x, 0) -- (\x, 1);
         
       \draw (0.5, 0.5) node {1};
-      \draw (1.5, 0.5) node {\only<-3>{\only<2>\emphr{5}}\only<4->{\only<4>\emph{3}}};
-      \draw (2.5, 0.5) node {\only<-3>{\only<3>\emphr{3}}\only<4-6>{\only<4>\emph{5}}\only<7->{\only<7>\emph{4}}};
-      \draw (3.5, 0.5) node {\only<-6>{\only<5>\emphr{6}}\only<7->{\only<7>\emph{5}}};
-      \draw (4.5, 0.5) node {\only<-6>{\only<6>\emphr{4}}\only<7->{\only<7>\emph{6}}};
+      \draw (1.5, 0.5) node {\only<-3|handout:1>{\only<2|handout:0>\emphr{5}}\only<4-|handout:2->{\only<4|handout:2>\emph{3}}};
+      \draw (2.5, 0.5) node {\only<-3|handout:1>{\only<3|handout:0>\emphr{3}}\only<4-6|handout:2>{\only<4|handout:2>\emph{5}}\only<7-|handout:3->{\only<7|handout:3>\emph{4}}};
+      \draw (3.5, 0.5) node {\only<-6|handout:1-2>{\only<5|handout:0>\emphr{6}}\only<7-|handout:3->{\only<7|handout:3>\emph{5}}};
+      \draw (4.5, 0.5) node {\only<-6|handout:1-2>{\only<6|handout:0>\emphr{4}}\only<7-|handout:3->{\only<7|handout:3>\emph{6}}};
       
-      \only<2>{\draw[rose, thick] (0, 0) rectangle (1, 1);}
-      \only<3>{\draw[rose, thick] (0, 0) rectangle (2, 1);}
-      \only<4-5>{\draw[rose, thick] (0, 0) rectangle (3, 1);}
-      \only<6>{\draw[rose, thick] (0, 0) rectangle (4, 1);}
-      \only<7>{\draw[rose, thick] (0, 0) rectangle (5, 1);}
+      \only<2|handout:0>{\draw[rose, thick] (0, 0) rectangle (1, 1);}
+      \only<3|handout:0>{\draw[rose, thick] (0, 0) rectangle (2, 1);}
+      \only<4-5|handout:2>{\draw[rose, thick] (0, 0) rectangle (3, 1);}
+      \only<6|handout:0>{\draw[rose, thick] (0, 0) rectangle (4, 1);}
+      \only<7|handout:3>{\draw[rose, thick] (0, 0) rectangle (5, 1);}
     \end{tikzpicture}
   \end{block}
   
-  \uncover<9->{
+  \uncover<9-|handout:4->{
   \begin{block}{Using linked lists}
     \centering
     \begin{tikzpicture}[scale = 0.5]
 %      \draw (2.5, 5) 
       \draw (0.5, 0) rectangle (1.5, 1) (0.5, 0) -- (1.5, 1) (0.5, 1) -- (1.5, 0);
       
-      \uncover<-10>{\draw[->] (-1.5, 0.5) -- (0.25, 0.5);}
+      \uncover<-10|handout:4>{\draw[->] (-1.5, 0.5) -- (0.25, 0.5);}
       
-      \uncover<10->{
+      \uncover<10-|handout:5->{
       \draw (0, -1.5) rectangle (2, -0.5) (1, -0.5) -- (1, -1.5);
       \draw (0.5, -1) node {3};
       \fill (1.5, -1) circle (2pt);
       }
       
-      \only<11-14>{\draw[->, rounded corners] (-1.5, 0.5) -|  (-0.875, -1) -- (-0.25, -1);}
-      \only<11-12>{\draw[->, rounded corners] (1.5, -1) -|  (2.5, 0.5) -- (1.75, 0.5);}
+      \only<11-14|handout:5-6>{\draw[->, rounded corners] (-1.5, 0.5) -|  (-0.875, -1) -- (-0.25, -1);}
+      \only<11-12|handout:5>{\draw[->, rounded corners] (1.5, -1) -|  (2.5, 0.5) -- (1.75, 0.5);}
       
-      \uncover<12->{
+      \uncover<12-|handout:6->{
       \draw (3, -1.5) rectangle (5, -0.5) (4, -0.5) -- (4, -1.5);
       \draw (3.5, -1) node {5};
       \fill (4.5, -1) circle (2pt);
       }
       
-      \uncover<13->{\draw[->, rounded corners] (4.5, -1) |- (1.75, 0.5);}
-      \uncover<13-16>{\draw[->] (1.5, -1) -- (2.75, -1);}
+      \uncover<13-|handout:6->{\draw[->, rounded corners] (4.5, -1) |- (1.75, 0.5);}
+      \uncover<13-16|handout:6-7>{\draw[->] (1.5, -1) -- (2.75, -1);}
       
-      \uncover<14->{
+      \uncover<14-|handout:7->{
       \draw (-0.5, -3) rectangle (1.5, -2) (0.5, -2) -- (0.5, -3);
       \draw (0, -2.5) node {1};
       \fill (1, -2.5) circle (2pt);
       }
       
-      \only<15->{\draw[->, rounded corners] (-1.5, 0.5) -|  (-1.125, -2.5) -- (-0.75, -2.5);}
-      \only<15->{\draw[->, rounded corners] (1, -2.5) |-  (-0.75, -1.75) |- (-0.25, -1);}
+      \only<15-|handout:7->{\draw[->, rounded corners] (-1.5, 0.5) -|  (-1.125, -2.5) -- (-0.75, -2.5);}
+      \only<15-|handout:7->{\draw[->, rounded corners] (1, -2.5) |-  (-0.75, -1.75) |- (-0.25, -1);}
       
-      \uncover<16->{
+      \uncover<16-|handout:8->{
       \draw (2.5, -3) rectangle (4.5, -2) (3.5, -2) -- (3.5, -3);
       \draw (3, -2.5) node {4};
       \fill (4, -2.5) circle (2pt);
       }
       
-      \only<17->{\draw[->, rounded corners=2] (1.5, -1)  -- (1.5, -1.75) --  (1.875, -1.75) -- (1.875, -2.5) -- (2.25, -2.5);}
-      \only<17->{\draw[->, rounded corners] (4, -2.5) |-  (2.25, -1.75) |- (2.75, -1);}
+      \only<17-|handout:8>{\draw[->, rounded corners=2] (1.5, -1)  -- (1.5, -1.75) --  (1.875, -1.75) -- (1.875, -2.5) -- (2.25, -2.5);}
+      \only<17-|handout:8>{\draw[->, rounded corners] (4, -2.5) |-  (2.25, -1.75) |- (2.75, -1);}
       
       
     \end{tikzpicture}
@@ -256,7 +257,7 @@
     Knowing that all students in the same class will receive the same kind of candy, compute the least amount of money Alice must spend to give a candy to each of her students.
   \end{block}
   
-  \only<1>{
+  \only<1|handout:1>{
   \begin{example}
     \emphv{Input:}\\
       5\\
@@ -267,7 +268,7 @@
       2120
   \end{example}}
   
-  \only<2->{
+  \only<2-|handout:2>{
   \begin{block}{What problems can arise?}
     \begin{itemize}
       \item What do we know of $N$?
@@ -319,7 +320,7 @@ Using two arrays and the sort procedure in your preferred language
     Given an array $A$ of integers. If $i < j$ and $A[i] > A[j]$ then the pair $(i, j)$ is called an inversion of $A$. Count the number of inversions of $A$
   \end{block}
   
-  \only<1>{
+  \only<1|handout:1>{
   \begin{example}
     \emphv{Input:}\\
     2 3 8 6 1
@@ -329,7 +330,7 @@ Using two arrays and the sort procedure in your preferred language
     5
   \end{example}}
   
-  \only<2->{
+  \only<2-|handout:2>{
   \begin{block}{What problems can arise?}
     \begin{itemize}
       \item How great can the array be?
@@ -364,6 +365,7 @@ print result
 
 \begin{frame}[fragile]{Exercise 2: Inversion Count}
   
+  \vspace{-5pt}
   \begin{code}{Solution 2: Using Merge sort}
     \only<1>{Key idea: if there are no inversions, then during the merge, all the elements of the left array should be added before any element of the right array}
     

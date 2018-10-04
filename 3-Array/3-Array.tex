@@ -1,4 +1,6 @@
-\documentclass{beamer}
+\documentclass[handout]{beamer}
+%\documentclass{beamer}
+
 
 \usepackage{../macros}
 
@@ -72,7 +74,7 @@ int[] arr = {1, 2, 3};
     Given two numbers $A$ and $B$, count the number of occurrences of each digit in the range between $A$ and $B$ included
   \end{block}
   
-  \only<2-3>{
+  \only<2-3|handout:1>{
   \begin{block}{Representation}
     \centering
     \begin{tikzpicture}[scale = 0.5]
@@ -84,7 +86,7 @@ int[] arr = {1, 2, 3};
     \end{tikzpicture}
   \end{block}}
   
-  \only<3>{
+  \only<3|handout:1>{
   \begin{example}
     \emphv{Input:}\\
       10 15\\
@@ -98,7 +100,7 @@ int[] arr = {1, 2, 3};
 %        Case 3: 0:10 1:11 2:22 3:2 4:2 5:2 6:2 7:2 8:2 9:2
   \end{example}}
   
-  \only<4->{
+  \only<4-|handout:2>{
   \begin{block}{What problems can arise?}
     \begin{itemize}
       \item What do we know of $A$ and $B$?
@@ -185,16 +187,16 @@ print the result
     Given an array of integers, for each number sum the previous strictly smaller numbers 
   \end{block}
   
-  \only<2-12>{
+  \only<2-12|handout:1>{
   \begin{block}{Representation}
     \centering
     \begin{tikzpicture}[scale = 0.5]
       \draw (0, 0) rectangle (5, 1);
       \foreach \x in {1, 2, ..., 5}
         \draw (\x, 0) -- (\x, 1);
-      \draw (0.5, 0.5) node {\only<4, 5>\emphr{1}};
-      \draw (1.5, 0.5) node {\only<6, 7>\emphr{5}};
-      \draw (2.5, 0.5) node {\only<8, 9>\emphr{3}};
+      \draw (0.5, 0.5) node {\only<4, 5|handout:0>\emphr{1}};
+      \draw (1.5, 0.5) node {\only<6, 7|handout:0>\emphr{5}};
+      \draw (2.5, 0.5) node {\only<8, 9|handout:0>\emphr{3}};
       \draw (3.5, 0.5) node {6};
       \draw (4.5, 0.5) node {4};
       
@@ -205,9 +207,9 @@ print the result
       }
       
       \uncover<5->{\draw (0.5, -1) node {0};}
-      \only<6, 7>{\draw[rose, thick] (0, 0) rectangle (1, 1);}
+      \only<6, 7|handout:0>{\draw[rose, thick] (0, 0) rectangle (1, 1);}
       \uncover<7->{\draw (1.5, -1) node {1};}
-      \only<8, 9>{\draw[rose, thick] (0, 0) rectangle (2, 1);}
+      \only<8, 9|handout:0>{\draw[rose, thick] (0, 0) rectangle (2, 1);}
       \uncover<9->{\draw (2.5, -1) node {1};}
       \uncover<10->{
       \draw (3.5, -1) node {9};
@@ -220,7 +222,7 @@ print the result
     \end{tikzpicture}
   \end{block}}
   
-  \only<12>{
+  \only<12|handout:1>{
   \begin{example}
     \begin{columns}[T]
       \begin{column}{0.17\linewidth}
@@ -234,7 +236,7 @@ print the result
     \end{columns}
   \end{example}}
   
-  \only<13->{
+  \only<13-|handout:2>{
   \begin{block}{What problems can arise?}
     \begin{itemize}
       \item What do we know of the data?\\
