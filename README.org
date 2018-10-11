@@ -13,16 +13,15 @@
 
 * Lectures
 
-
-| 0. | [[file:0-Getting-Started/0-Getting-Started.pdf][Getting Started]]     |             |                 |                            |
-| 1. | [[file:1-Input-Output/1-Input-Output.pdf][Input/Output]]        | [[https://51364960.widgets.sphere-engine.com/lp?hash=BYJvSEImzv][TEST]] ([[https://www.spoj.com/problems/TEST/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=5nZK5szNQp][HELLOKIT]] ([[https://www.spoj.com/problems/HELLOKIT/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=3PHly1PcH6][LC-DISPLAY]]                 |
-| 2. | [[file:2-Numbers/slides.pdf][Numbers]]             | [[https://51364960.widgets.sphere-engine.com/lp?hash=akOa9uI8qs][GILNUM]]      | [[https://51364960.widgets.sphere-engine.com/lp?hash=aXNs7iIWY3][GILNUM (C/C++)]]  | [[https://51364960.widgets.sphere-engine.com/lp?hash=aLzFhfssNq][MIRROR]] ([[http://www.i3s.unice.fr/~malapert/org/teaching/R/concours-PC2.html#orgheadline34][with math display]]) |
-| 3. | [[file:3-Array/3-Array.pdf][Array]]              | [[https://51364960.widgets.sphere-engine.com/lp?hash=xdhZiq5g1C][MKBOOK]] ([[https://www.spoj.com/problems/TEST/][spoj]])           | [[https://51364960.widgets.sphere-engine.com/lp?hash=SCO4R8AKuI][DCEP06]] ([[https://www.spoj.com/problems/TEST/][spoj]])               | [[https://51364960.widgets.sphere-engine.com/lp?hash=IkrYuwwPwo][LONGUEST]] ([[https://www.spoj.com/problems/TEST/][spoj]]) ([[https://drive.google.com/file/d/1dwDLcOjdgFbhIWG7n1n8DEkCmzE8C7nm/view?usp=sharing][indice]])                          |
-| 4. | [[file:4-Sort/4-Sort.pdf][Sort]]                | [[https://51364960.widgets.sphere-engine.com/lp?hash=ldMP1yXOpl][CADYDIST]] ([[https://www.spoj.com/problems/TEST/][spoj]])           | [[https://51364960.widgets.sphere-engine.com/lp?hash=XqxuZhb5Vo][INVCNT]] ([[https://www.spoj.com/problems/TEST/][spoj]])               | [[https://51364960.widgets.sphere-engine.com/lp?hash=ktBBsT1xa2][YODANESS]] ([[https://www.spoj.com/problems/TEST/][spoj]])                            |
-| 5. | Tree                |             |                 |                            |
-| 6. | Dynamic Programming |             |                 |                            |
-| 7. | String Processing   |             |                 |                            |
-| 8. | Graph               |             |                 |                            |
+| 0. | [[file:0-Getting-Started/0-Getting-Started.pdf][Getting Started]]     |                 |                 |                            |
+| 1. | [[file:1-Input-Output/1-Input-Output.pdf][Input/Output]]        | [[https://51364960.widgets.sphere-engine.com/lp?hash=BYJvSEImzv][TEST]] ([[https://www.spoj.com/problems/TEST/][spoj]])     | [[https://51364960.widgets.sphere-engine.com/lp?hash=5nZK5szNQp][HELLOKIT]] ([[https://www.spoj.com/problems/HELLOKIT/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=3PHly1PcH6][LC-DISPLAY]]                 |
+| 2. | [[file:2-Numbers/slides.pdf][Numbers]]             | [[https://51364960.widgets.sphere-engine.com/lp?hash=akOa9uI8qs][GILNUM]]          | [[https://51364960.widgets.sphere-engine.com/lp?hash=aXNs7iIWY3][GILNUM (C/C++)]]  | [[https://51364960.widgets.sphere-engine.com/lp?hash=aLzFhfssNq][MIRROR]] ([[http://www.i3s.unice.fr/~malapert/org/teaching/R/concours-PC2.html#orgheadline34][with math display]]) |
+| 3. | [[file:3-Array/3-Array.pdf][Array]]               | [[https://51364960.widgets.sphere-engine.com/lp?hash=xdhZiq5g1C][MKBOOK]] ([[https://www.spoj.com/problems/MKBOOK][spoj]])   | [[https://51364960.widgets.sphere-engine.com/lp?hash=SCO4R8AKuI][DCEP206]] ([[https://www.spoj.com/problems/DCEP206/][spoj]])  | [[https://51364960.widgets.sphere-engine.com/lp?hash=IkrYuwwPwo][LONGUEST]]  ([[https://drive.google.com/file/d/1dwDLcOjdgFbhIWG7n1n8DEkCmzE8C7nm/view?usp=sharing][indice]])         |
+| 4. | [[file:4-Sort/4-Sort.pdf][Sort]]                | [[https://51364960.widgets.sphere-engine.com/lp?hash=ldMP1yXOpl][CADYDIST]] ([[https://www.spoj.com/problems/CADYDIST/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=XqxuZhb5Vo][INVCNT]] ([[https://www.spoj.com/problems/INVCNT/][spoj]])   | [[https://51364960.widgets.sphere-engine.com/lp?hash=ktBBsT1xa2][YODANESS]] ([[https://www.spoj.com/problems/YODANESS/][spoj]])            |
+| 5. | Tree                |                 |                 |                            |
+| 6. | Dynamic Programming |                 |                 |                            |
+| 7. | String Processing   |                 |                 |                            |
+| 8. | Graph               |                 |                 |                            |
 
 * Grading
   - *Concours Prog @ UNS* (40%): you will participate to a local programming contest. Your grade will depend on your rank in the contest. 
