@@ -1,5 +1,5 @@
-%\documentclass[handout]{beamer}
-\documentclass{beamer}
+\documentclass[handout]{beamer}
+%\documentclass{beamer}
 
 
 \usepackage{../macros}
@@ -300,9 +300,9 @@ print result
       \foreach \x in {0, 1, ..., 9}
         \draw ({\x + 0.5}, 1) node[above] {\scriptsize\x};
         
-      \only<4|handout:0>{\draw (1.5, 1) node[above] {\scriptsize\emphr{1}};}
-      \only<5|handout:0>{\draw (3.5, 1) node[above] {\scriptsize\emphr{3}};}
-      \only<6|handout:0>{\draw (9.5, 1) node[above] {\scriptsize\emphr{9}};}
+      \only<4>{\draw (1.5, 1) node[above] {\scriptsize\emphr{1}};}
+      \only<5>{\draw (3.5, 1) node[above] {\scriptsize\emphr{3}};}
+      \only<6>{\draw (9.5, 1) node[above] {\scriptsize\emphr{9}};}
       
       \only<3->{\draw[rose] (11, 0.5) node {$\Longrightarrow$};
       
@@ -313,9 +313,9 @@ print result
         \draw (0.5, 0.5) node {$s_b$};
         \draw (4.5, 0.5) node {$s_e$};
         
-        \only<4->{\draw (1.5, 0.5) node {\only<4|handout:0>\emphr{1}};}
-        \only<5->{\draw (2.5, 0.5) node {\only<5|handout:0>\emphr{3}};}
-        \only<6->{\draw (3.5, 0.5) node {\only<6|handout:0>\emphr{9}};}
+        \only<4->{\draw (1.5, 0.5) node {\only<4>\emphr{1}};}
+        \only<5->{\draw (2.5, 0.5) node {\only<5>\emphr{3}};}
+        \only<6->{\draw (3.5, 0.5) node {\only<6>\emphr{9}};}
       \end{scope}}
     \end{tikzpicture}
   \end{block}}
