@@ -1,5 +1,5 @@
-\documentclass[handout]{beamer}
-%\documentclass{beamer}
+%\documentclass[handout]{beamer}
+\documentclass{beamer}
 
 
 \usepackage{../macros}
@@ -274,6 +274,108 @@ print result
     \medskip
     \emphv{Output:}\\
     15\\40
+  \end{exampleblock}
+\end{frame}
+
+
+\begin{frame}{Exercise 3: Longest Connected Subsequence}
+  \begin{overlayarea}{\textwidth}{\textheight}
+  
+  \vspace{-10pt}
+  \begin{block}{Statement}
+    Given a binary sequence and a number $k > 0$ find how long is the longest connected subsequence which contains at most $k$ ones
+  \end{block}
+  
+  \only<2-7|handout:1>{
+  \begin{block}{Representation}
+    \centering
+    \begin{tikzpicture}[scale = 0.5]
+      \draw (0, 0) rectangle (10, 1);
+      \foreach \x in {1, 2, ..., 9}
+        \draw (\x, 0) -- (\x, 1);
+      \foreach \x in {0, 2, 4, 5, 6, 7, 8}
+        \draw ({\x + 0.5}, 0.5) node {0};
+      \foreach \x in {1, 3, 9}
+        \draw ({\x + 0.5}, 0.5) node {1};
+      \foreach \x in {0, 1, ..., 9}
+        \draw ({\x + 0.5}, 1) node[above] {\scriptsize\x};
+        
+      \only<4|handout:0>{\draw (1.5, 1) node[above] {\scriptsize\emphr{1}};}
+      \only<5|handout:0>{\draw (3.5, 1) node[above] {\scriptsize\emphr{3}};}
+      \only<6|handout:0>{\draw (9.5, 1) node[above] {\scriptsize\emphr{9}};}
+      
+      \only<3->{\draw[rose] (11, 0.5) node {$\Longrightarrow$};
+      
+      \begin{scope}[xshift = 12cm]
+        \draw (0, 0) rectangle (5, 1);
+        \foreach \x in {1, 2, 3, 4}
+          \draw (\x, 0) -- (\x, 1);
+        \draw (0.5, 0.5) node {$s_b$};
+        \draw (4.5, 0.5) node {$s_e$};
+        
+        \only<4->{\draw (1.5, 0.5) node {\only<4|handout:0>\emphr{1}};}
+        \only<5->{\draw (2.5, 0.5) node {\only<5|handout:0>\emphr{3}};}
+        \only<6->{\draw (3.5, 0.5) node {\only<6|handout:0>\emphr{9}};}
+      \end{scope}}
+    \end{tikzpicture}
+  \end{block}}
+  
+  \only<7|handout:1>{
+  \begin{example}
+    \emphv{Input:}\\
+      10 1\\0101000001
+
+    \emphv{Output:}\\
+      7
+%        Case 2: 0:14 1:19 2:19 3:19 4:19 5:19 6:19 7:19 8:19 9:19\\
+%        Case 3: 0:10 1:11 2:22 3:2 4:2 5:2 6:2 7:2 8:2 9:2
+  \end{example}}
+  
+  \only<8-|handout:2>{
+  \begin{block}{What problems can arise?}
+    \begin{itemize}
+      \item What do we know of $k$?
+      \item<9-> How great can $k$ be?
+      \item<10-> How long can the sequence be?\\
+      \uncover<11->{\emph{$\Longrightarrow$} Are integers big enough for the solution?}\\
+      \uncover<12->{\emph{$\Longrightarrow$} What type of array for the solution?}
+    \end{itemize}
+  \end{block}}
+  
+  \end{overlayarea}
+\end{frame}
+
+\begin{frame}[fragile]{Exercise 3: Longest Connected Subsequence}
+
+  \begin{code}{Solution}
+    \begin{PseudoCode}
+read $T$ on the standard input
+
+foreach test case
+    read $n$ and $k$ on the standard input
+    read the sequence on the standard input
+    create array to represent the sequence
+    max $\leftarrow$ 0
+    for i from 0 to $n$ - offset
+        if max < array[i + offset] - array[i]
+            max $\leftarrow$ array[i + offset] - array[i]
+
+print max
+    \end{PseudoCode}
+  \end{code}
+\end{frame}
+
+\begin{frame}{Exercise 3: Longest Connected Subsequence}
+
+  \begin{exampleblock}{More test cases}
+    \emphv{Input:}\\
+    3\\3 1\\000\\
+    4 2\\1111\\
+    5 3\\01110\\
+    
+    \medskip
+    \emphv{Output:}\\
+    3\\2\\5
   \end{exampleblock}
 \end{frame}
 
