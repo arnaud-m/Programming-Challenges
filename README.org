@@ -21,7 +21,7 @@
 | 5. | [[file:5-Tree/5-Tree.pdf][Tree]]                | [[https://51364960.widgets.sphere-engine.com/lp?hash=nW8AWocp1Y][PT07Y]] ([[https://www.spoj.com/problems/PT07Y/][spoj]])    | [[https://51364960.widgets.sphere-engine.com/lp?hash=uxCy5rAlVR][TREEORD]] ([[https://www.spoj.com/problems/TREEORD/][spoj]])  |                            |
 | 6. | Dynamic Programming |                 |                 |                            |
 | 7. | [[file:7-String-Processing/7-String-Processing.pdf][String Processing]]   | [[https://51364960.widgets.sphere-engine.com/lp?hash=tUXeBE8MMo][PLAQ]]            | [[https://51364960.widgets.sphere-engine.com/lp?hash=MoVdQtKITi][REBOND]]          |                            |
-| 8. | Graph               | [[https://51364960.widgets.sphere-engine.com/lp?hash=knT8Qe9kRj][ANARC08G]] ([[https://www.spoj.com/problems/ANARC08G/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=snqNEbCYaf][PARADOX]] ([[https://www.spoj.com/problems/PARADOX/][spoj]])  | [[https://51364960.widgets.sphere-engine.com/lp?hash=lBWbE6pLT8][BUGLIFE]] ([[https://www.spoj.com/problems/BUGLIFE/][spoj]])             |
+| 8. | [[file:8-Graph/8-Graph.pdf][Graph]]               | [[https://51364960.widgets.sphere-engine.com/lp?hash=knT8Qe9kRj][ANARC08G]] ([[https://www.spoj.com/problems/ANARC08G/][spoj]]) | [[https://51364960.widgets.sphere-engine.com/lp?hash=snqNEbCYaf][PARADOX]] ([[https://www.spoj.com/problems/PARADOX/][spoj]])  | [[https://51364960.widgets.sphere-engine.com/lp?hash=lBWbE6pLT8][BUGLIFE]] ([[https://www.spoj.com/problems/BUGLIFE/][spoj]])             |
 
 
 * Grading
@@ -31,8 +31,9 @@
 
 * Resources
 
+- [[http://i3s.unice.fr/master-info/etus/ucancode/][UCAnCODE]]
 - [[https://www3.cs.stonybrook.edu/~skiena/392/][CSE 392 - Programming Challenges (2012)]]
-- [[http://www.i3s.unice.fr/~malapert/org/teaching/R/concours-PC2.html][ConcoursProg@UNS]]
+- [[https://web.stanford.edu/class/cs97si/][CS 97SI: Introduction to Programming Contests]]
 - [[http://www.spoj.com/][spoj.com]]
 - [[https://uva.onlinejudge.org/][uva.onlinejudge.org]]
 - [[http://codechef.com/][codechef.com]]
