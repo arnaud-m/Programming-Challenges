@@ -28,7 +28,7 @@
    \end{itemize}
  \item Repeatedly get strings and break them down into single characters.
    \begin{itemize}
-   \item (perhaps using a library function like scanf). 
+   \item (perhaps using a library function like scanf).
    \end{itemize}
  \item Read the entire line as a string, and then parsing it by accessing characters in the string.
    \begin{itemize}
@@ -40,14 +40,14 @@ Perhaps more modern ways using streams are easier, perhaps not.
 
 
 \begin{frame}{Make the Best from your Language}
-  
+
   \begin{block}{Basic Data Types}
     Selecting the right data structure makes a trememdous difference in the organization and complexity of a given program.
     Be aware of your basic structured data types (arrays, records, multidimensional arrays, enumerated types) and what they are used for.
 \end{block}
 
 \begin{block}{Library Functions}
-  
+
 \end{block}
 \end{frame}
 
@@ -60,16 +60,16 @@ Perhaps more modern ways using streams are easier, perhaps not.
   \begin{block}{ASCII}
     The American Standard Code for Information Interchange (ASCII) is a single-byte character code where $2^7 = 128$ characters are specified.
     Bytes are eight-bit entities; so that means the highest-order bit is left as zero.
-    
+
   \end{block}
-  
+
 
 \end{frame}
 
 \begin{frame}{Properties of ASCII}
   \begin{itemize}
   %\item All non-printable characters have either the first three bits as zero or all seven lowest bits as one. This makes it very easy to eliminate them before displaying junk.
-  \item Both the uppercase and lowercase letters and the numerical digits appear sequentially. Thus we can iterate through all the letters/digits simply by looping from the value of the first symbol (say, 'a') to value of the last symbol (say, 'z'). 
+  \item Both the uppercase and lowercase letters and the numerical digits appear sequentially. Thus we can iterate through all the letters/digits simply by looping from the value of the first symbol (say, 'a') to value of the last symbol (say, 'z').
   \item We can convert a character (say, 'I') to its rank in the collating sequence (eighth, if 'A' is the zeroth character) simply by subtracting off the first symbol ('A').
   \item We can convert (say 'C') from uppercase to lowercase by adding the difference of the upper and lowercase starting character ('C'-'A'+'a')
   \item The character code tells us what will happen when naively sorting text files. Sorting alphabetically means sorting by character code. Using a different collating sequence requires more complicated comparison functions.
@@ -83,7 +83,7 @@ Perhaps more modern ways using streams are easier, perhaps not.
   More modern international character code designs such as Unicode use two or even three bytes per symbol, and can represent virtually any symbol in every language on earth.
   \begin{itemize}
   \item Older languages, like Pascal, C, and C++, view the char type as virtually synonymous with 8-bit entities.
-  \item However, good old ASCII remains alive embedded in Unicode. Java, on the other hand, was designed to support Unicode, so characters are 16-bit entities. 
+  \item However, good old ASCII remains alive embedded in Unicode. Java, on the other hand, was designed to support Unicode, so characters are 16-bit entities.
   \end{itemize}
 
 
@@ -103,7 +103,7 @@ Perhaps more modern ways using streams are easier, perhaps not.
   Presumably this is what Java implementations do internally.
  \item[Linked Lists of Characters] Text strings can be represented using linked lists, but this is typically avoided because of the high space-overhead associated with having a several-byte pointer for each single byte character.
  \end{description}
- 
+
 
 \end{frame}
 
@@ -160,7 +160,7 @@ the following properties:
   \begin{block}{Why is it undesirable?}
     The CPU must stall its operation while waiting for data to be loaded or unloaded from main memory or secondary storage.
   \end{block}
-  
+
 \end{frame}
 
 
@@ -172,7 +172,7 @@ the following properties:
   \begin{alertblock}{Quickstart}
     Simply modify a solution of the \href{https://github.com/arnaud-m/echo}{ECHO Problem} in your preferred language.
   \end{alertblock}
-  
+
   \begin{block}{\href{https://github.com/arnaud-m/echo}{ECHO Problem}}
     The \href{https://github.com/arnaud-m/echo}{ECHO repository} contains templates for some popular languages. You can contribute if your favorite language is missing.
   \end{block}
@@ -203,12 +203,12 @@ the following properties:
 \end{Python}
 \end{block}
     \end{column}
-    
+
     \begin{column}{0.49\textwidth}
       \begin{block}{With Character Buffer in C}
         \begin{C}
-char w[] = "Love";
-printf("%s%.2s", &v[2], v);
+char x[] = "Love";
+printf("%s%.2s", &x[2], x);
 // prints 'veLo'
         \end{C}
       \end{block}
@@ -219,7 +219,7 @@ printf("%s%.2s", &v[2], v);
 
 \begin{frame}[fragile]
   \frametitle{706 - LC-Display}
-  
+
     \begin{algorithm}[H]
       \SetKwFunction{print}{print}
       \KwData{an integer $n$ and a size $w$.}
