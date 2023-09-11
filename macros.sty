@@ -1,7 +1,7 @@
 %%%%%%%%%% Authors and date definition %%%%%%%%%%
 
 \author[]{Arnaud Malapert, Gilles Menez, Marie Pelleau}
-\date[2021 - 2022]{Master Informatique, Universit\'e C\^ote d'Azur}
+\date[]{Master Informatique, Universit\'e C\^ote d'Azur}
 
 
 %%%%%%%%% Package import %%%%%%%%%%
@@ -86,6 +86,10 @@
 
 \renewcommand\alert[1]{\textbf{\textcolor{rose}{#1}}}
 
+%%%%%%%%%% Mathématiques %%%%%%%%%%
+
+\def\mb#1{\ensuremath{\mathbb{#1}}}
+
 %%%%%%%%%% Coloration syntaxique %%%%%%%%%%
 
 \newenvironment{code}[1]{\begin{alertblock}{#1}}{\end{alertblock}}
@@ -106,6 +110,8 @@
 \lstnewenvironment{C}
   {\lstset{style=codeC}}
   {}
+
+\def\inlc#1{\lstinline[style=codeC]!#1!}
 
 \lstdefinestyle{codePy}{
   mathescape=true,
